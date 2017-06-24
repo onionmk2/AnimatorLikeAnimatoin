@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: b50cea9a1a8344fedaf697b76febb9e7
-labels:
-- Sprite Animation Preview
-timeCreated: 1453788012
-licenseType: Pro
+guid: 69ab456b0a1d44ce593bbd4e6549c62e
+timeCreated: 1431425693
+licenseType: Store
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []

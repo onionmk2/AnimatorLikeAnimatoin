@@ -24,7 +24,7 @@ SOFTWARE.
 ﻿using System.Linq;
 using UnityEngine;
 using UnityEditor;
-
+using System.Reflection;
 namespace SpriteAnimationPreview
 {
     [CustomEditor(typeof(AnimationClip)), CanEditMultipleObjects]
@@ -33,7 +33,8 @@ namespace SpriteAnimationPreview
         protected override Editor GetBaseEditor()
         {
             Editor editor = null;
-            var baseType = Types.GetType("UnityEditor.AnimationClipEditor", "UnityEditor.dll");
+
+            var baseType = Assembly.Load ("UnityEditor.dll").GetType ("UnityEditor.AnimationClipEditor");
             CreateCachedEditor(targets, baseType, ref editor);
             return editor;
         }
